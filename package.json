@@ -1,0 +1,25 @@
+{
+  "name": "contentful-dashboard-css",
+  "version": "1.0.0",
+  "description": "Custom CSS to optimize the Contentful dashboard for spaces with a lot of content.",
+  "main": "",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "node-sass src/index.scss contentful-dashboard.css",
+    "dev": "node-sass -w src/index.scss contentful-dashboard.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerryjappinen/contentful-dashboard-css.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jerryjappinen/contentful-dashboard-css/issues"
+  },
+  "homepage": "https://github.com/jerryjappinen/contentful-dashboard-css#readme"
+}

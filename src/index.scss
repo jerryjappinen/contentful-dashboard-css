@@ -1,0 +1,202 @@
+// Scope everything to Contentful
+body[ng-app="contentful/app"] {
+
+  // Global font size
+  font-size: 12px !important;
+
+
+
+  // Headers
+
+  // Main navigation with dark background
+  [ui-view="nav-bar"] {
+    height: 40px !important;
+    min-height: 40px !important;
+
+    .app-top-bar {
+      height: 40px !important;
+      min-height: 40px !important;
+    }
+
+    // Main navigation with dark background: site title
+    [data-test-id="sidepanel-trigger-text-title"],
+    [data-test-id="sidepanel-trigger-text-subtitle"] {
+      line-height: 1 !important;
+      padding-top: 1px !important;
+      padding-bottom: 1px !important;
+    }
+
+    // Main navigation with dark background: buttons
+    [data-test-id="quick-nav-search-button"] {
+      padding-top: 11px !important;
+    }
+
+  }
+
+  // Top bar with light background
+  [data-test-id="cf-ui-workbench-header"] {
+    padding-top: 0 !important;
+    padding-right: 0.25rem !important;
+    padding-bottom: 0 !important;
+    height: 40px !important;
+
+    // Top bar with light background: main title
+    [data-test-id="cf-ui-heading"] {
+      min-width: 8em !important;
+      font-size: 0.875rem !important;
+    }
+
+    [data-test-id="workbench-description"] {
+      margin-left: 0.25rem !important;
+
+      i {
+        width: 1em !important;
+      }
+
+    }
+
+    // Top bar with light background: search field
+    [class^="Workbench__Workbench__header-actions"] {
+      margin-left: 0.25rem !important;
+
+      > div {
+        margin-left: 0 !important;
+
+        > :first-child {
+          margin-top: 2px !important;
+
+          > div {
+            border-color: #fff !important;
+          }
+
+        }
+
+      }
+
+    }
+
+    // Top bar with light background: create button
+    [data-test-id="create-entry-button"] {
+      height: 2rem !important;
+
+      > span {
+        padding-left: 0.25rem !important;
+        padding-right: 0.25rem !important;
+      }
+
+    }
+
+  }
+
+  // Match layout to the space savings
+  [data-test-id="entry-view"] > div:last-child {
+    height: calc(100% - 40px) !important;
+  }
+
+
+
+  // Sidebar
+
+  // "Scheduled content" container
+  [data-test-id="workbench-sidebar-left"] > :first-child {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0 !important;
+    border-bottom-width: 0 !important;
+  }
+
+  [data-test-id="workbench-sidebar-left"] > :first-child a {
+    text-decoration: none !important;
+  }
+
+  // Sidebar tab menu, parent
+  [data-test-id="workbench-sidebar-left"] > :nth-child(2) > :first-child {
+    padding-top: 0 !important;
+  }
+
+  // Sidebar tab menu, each tab
+  [data-test-id="workbench-sidebar-left"] > :nth-child(2) > :first-child [data-test-id="cf-ui-tabs"] > div {
+    height: 36px !important;
+    line-height: 36px !important;
+  }
+
+  // Content of the selected tab: each list item
+  [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="sortable-container"] > div,
+  [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="sortable-container"] > div > div {
+    // padding-top: 0.25rem !important;
+    // padding-bottom: 0.25rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="sortable-container"] [data-test-id^="draggable-view-"],
+  [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="sortable-container"] [data-test-id^="nested-view-"],
+  [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="sortable-container"] header {
+    padding-top: 0.35rem !important;
+    padding-bottom: 0.35rem !important;
+  }
+
+  [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="sortable-container"] [data-test-id="cf-ui-card-actions"] [data-test-id="cf-ui-icon-button"] {
+    padding-top: 0.3rem !important;
+  }
+
+  // Content of the selected tab: "Add folder" container
+  [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="view-wrapper"] > div > :last-child {
+    height: 35px !important;
+    flex-basis: 35px !important;
+    max-height: 35px !important;
+    line-height: 35px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="view-wrapper"] > div > :last-child button {
+    text-decoration: none !important;
+  }
+
+
+
+  // Entry view
+
+  // Smaller header
+  .entry-editor {
+
+    [class^="Workbench__Workbench__content-inner"] {
+      > [data-test-id="cf-ui-tabs"] {
+        > * {
+          height: 30px !important;
+          line-height: 30px !important;
+        }
+      }
+    }
+
+    // Bigger content area
+    [class^="Workbench__Workbench__content-wrapper"] {
+      max-height: calc(100% - 40px) !important;
+    }
+
+    [class^="Workbench__Workbench__content-inner"] {
+      > [data-test-id="cf-ui-tab-panel"] {
+        max-height: calc(100% - 30px) !important;
+      }
+    }
+
+  }
+
+
+
+  // Listings
+
+  [data-test-id="cf-ui-table-body"] {
+
+    [class^="TableCell__TableCell"] {
+      padding: 0.4rem 0.75rem !important;
+
+      [class^="TextLink__TextLink___"] {
+        font-size: 0.75rem !important;
+      }
+
+    }
+
+  }
+
+}
