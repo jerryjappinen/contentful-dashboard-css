@@ -1,0 +1,182 @@
+/*
+Contentful: Smaller vertical paddings
+*/
+
+/* Global font size */
+body[ng-app="contentful/app"] {
+    font-size: 12px !important;
+}
+
+
+
+/* Headers */
+
+/* Main navigation with dark background */
+body[ng-app="contentful/app"] [ui-view="nav-bar"] {
+    height: 40px !important;
+    min-height: 40px !important;
+}
+
+body[ng-app="contentful/app"] [ui-view="nav-bar"] .app-top-bar {
+    height: 40px !important;
+    min-height: 40px !important;
+}
+
+/* Main navigation with dark background: site title */
+body[ng-app="contentful/app"] [ui-view="nav-bar"] [data-test-id="sidepanel-trigger-text-title"],
+body[ng-app="contentful/app"] [ui-view="nav-bar"] [data-test-id="sidepanel-trigger-text-subtitle"] {
+    line-height: 1 !important;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+
+/* Main navigation with dark background: buttons */
+body[ng-app="contentful/app"] [ui-view="nav-bar"] [data-test-id="quick-nav-search-button"] {
+    padding-top: 11px !important;
+}
+
+/* Top bar with light background */
+body[ng-app="contentful/app"] [data-test-id="cf-ui-workbench-header"] {
+    padding-top: 0 !important;
+    padding-right: 0.25rem !important;
+    padding-bottom: 0 !important;
+    height: 40px !important;
+}
+
+/* Top bar with light background: main title */
+body[ng-app="contentful/app"] [data-test-id="cf-ui-workbench-header"] [data-test-id="cf-ui-heading"] {
+    min-width: 8em !important;
+    font-size: 0.875rem !important;
+}
+
+body[ng-app="contentful/app"] [data-test-id="cf-ui-workbench-header"] [data-test-id="workbench-description"] {
+    margin-left: 0.25rem !important;
+}
+
+body[ng-app="contentful/app"] [data-test-id="cf-ui-workbench-header"] [data-test-id="workbench-description"] i {
+    width: 1em !important;
+}
+
+/* Top bar with light background: search field */
+body[ng-app="contentful/app"] [data-test-id="cf-ui-workbench-header"] [class^="Workbench__Workbench__header-actions"] {
+    margin-left: 0.25rem !important;
+}
+
+body[ng-app="contentful/app"] [data-test-id="cf-ui-workbench-header"] [class^="Workbench__Workbench__header-actions"] > div {
+    margin-left: 0 !important;
+}
+
+body[ng-app="contentful/app"] [data-test-id="cf-ui-workbench-header"] [class^="Workbench__Workbench__header-actions"] > div > :first-child {
+    margin-top: 2px !important;
+    /* height: 36px !important; */
+}
+
+body[ng-app="contentful/app"] [data-test-id="cf-ui-workbench-header"] [class^="Workbench__Workbench__header-actions"] > div > :first-child > div {
+    border-color: #fff !important;
+}
+
+/* Top bar with light background: create button */
+body[ng-app="contentful/app"] [data-test-id="cf-ui-workbench-header"] [data-test-id="create-entry-button"] {
+    height: 2rem !important;
+}
+
+body[ng-app="contentful/app"] [data-test-id="cf-ui-workbench-header"] [data-test-id="create-entry-button"] > span {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+}
+
+/* Match layout to the space savings below */
+body[ng-app="contentful/app"] [data-test-id="entry-view"] > div:last-child {
+    height: calc(100% - 40px) !important;
+}
+
+
+
+/* Sidebar */
+
+/* "Scheduled content" container */
+body[ng-app="contentful/app"] [data-test-id="workbench-sidebar-left"] > :first-child {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0 !important;
+    border-bottom-width: 0 !important;
+}
+
+body[ng-app="contentful/app"] [data-test-id="workbench-sidebar-left"] > :first-child a {
+    text-decoration: none !important;
+}
+
+/* Sidebar tab menu, parent */
+body[ng-app="contentful/app"] [data-test-id="workbench-sidebar-left"] > :nth-child(2) > :first-child {
+    padding-top: 0 !important;
+}
+
+/* Sidebar tab menu, each tab */
+body[ng-app="contentful/app"] [data-test-id="workbench-sidebar-left"] > :nth-child(2) > :first-child [data-test-id="cf-ui-tabs"] > div {
+    height: 36px !important;
+    line-height: 36px !important;
+}
+
+/* Content of the selected tab: each list item */
+body[ng-app="contentful/app"] [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="sortable-container"] > div,
+body[ng-app="contentful/app"] [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="sortable-container"] > div > div {
+    /* padding-top: 0.25rem !important; */
+    /* padding-bottom: 0.25rem !important; */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+body[ng-app="contentful/app"] [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="sortable-container"] [data-test-id^="draggable-view-"],
+body[ng-app="contentful/app"] [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="sortable-container"] [data-test-id^="nested-view-"],
+body[ng-app="contentful/app"] [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="sortable-container"] header {
+    padding-top: 0.35rem !important;
+    padding-bottom: 0.35rem !important;
+}
+
+body[ng-app="contentful/app"] [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="sortable-container"] [data-test-id="cf-ui-card-actions"] [data-test-id="cf-ui-icon-button"] {
+    padding-top: 0.3rem !important;
+}
+
+/* Content of the selected tab: "Add folder" container */
+body[ng-app="contentful/app"] [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="view-wrapper"] > div > :last-child {
+    height: 35px !important;
+    flex-basis: 35px !important;
+    max-height: 35px !important;
+    line-height: 35px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+body[ng-app="contentful/app"] [data-test-id="workbench-sidebar-left"] > :nth-child(2) [data-test-id="view-wrapper"] > div > :last-child button {
+    text-decoration: none !important;
+}
+
+
+
+/* Entry view */
+
+/* Smaller header */
+body[ng-app="contentful/app"] .entry-editor [class^="Workbench__Workbench__content-inner"] > [data-test-id="cf-ui-tabs"] > * {
+    height: 30px !important;
+    line-height: 30px !important;
+}
+
+/* Bigger content area */
+body[ng-app="contentful/app"] .entry-editor [class^="Workbench__Workbench__content-wrapper"] {
+    max-height: calc(100% - 40px) !important;
+}
+
+body[ng-app="contentful/app"] .entry-editor [class^="Workbench__Workbench__content-inner"] > [data-test-id="cf-ui-tab-panel"] {
+    max-height: calc(100% - 30px) !important;
+}
+
+
+
+/* Listings */
+
+body[ng-app="contentful/app"] [data-test-id="cf-ui-table-body"] [class^="TableCell__TableCell"] {
+    padding: 0.4rem 0.75rem !important;
+}
+
+body[ng-app="contentful/app"] [data-test-id="cf-ui-table-body"] [class^="TableCell__TableCell"] [class^="TextLink__TextLink___"] {
+    font-size: 0.75rem !important;
+}
